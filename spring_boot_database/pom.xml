@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.example</groupId>
-	<artifactId>spring_boot_helloworld</artifactId>
+	<artifactId>spring_boot_database</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>spring_boot_helloworld</name>
+	<name>spring_boot_database</name>
 	<description>Demo project for Spring Boot</description>
 
 	<parent>
@@ -35,7 +35,19 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		
+		<!--引入jdbc依赖用于访问数据库，下面两个节点都需要-->
+		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
+        </dependency>
+        <dependency>
+              <groupId>mysql</groupId>
+              <artifactId>mysql-connector-java</artifactId>
+          </dependency>
 	</dependencies>
+	
+	
 
 	<build>
 		<plugins>
