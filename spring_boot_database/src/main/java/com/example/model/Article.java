@@ -1,6 +1,6 @@
 package com.example.model;
 
-import java.sql.Date;
+import java.util.Date;
 
 public class Article {
     private Long id;
