@@ -2,6 +2,7 @@
 要点
 
 1、在pom.xml中增加依赖项
+```
 <dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-jdbc</artifactId>
@@ -10,6 +11,7 @@
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 		</dependency>
+```
 		
 2、编写数据库datasource连接
 
