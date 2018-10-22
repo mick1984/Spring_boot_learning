@@ -21,8 +21,8 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @Configuration
 @EnableTransactionManagement
 @EnableJpaRepositories(
-		entityManagerFactoryRef = "entityManagerFactoryPrimary",//配置连接工厂 entityManagerFactory
-        transactionManagerRef = "transactionManagerPrimary", //配置 事物管理器  transactionManager
+		entityManagerFactoryRef = "entityManagerFactorySecond",//配置连接工厂 entityManagerFactory
+        transactionManagerRef = "transactionManagerSecond", //配置 事物管理器  transactionManager
         basePackages = {"com.example.dao.UserRepository2"}//设置dao（repo）所在位置
 		)
 public class SecondJpaConfig {
@@ -33,9 +33,8 @@ public class SecondJpaConfig {
     @Qualifier("secondDataSource")
     private DataSource secondDataSource;
 	
-	@Bean(name = "entityManagerFactoryPrimary")
-    @Primary
-    public LocalContainerEntityManagerFactoryBean entityManagerFactoryPrimary(EntityManagerFactoryBuilder builder) {
+	@Bean(name = "entityManagerFactorySecond")
+    public LocalContainerEntityManagerFactoryBean entityManagerFactorySecond(EntityManagerFactoryBuilder builder) {
 
         return builder
                 //设置数据源
@@ -46,7 +45,7 @@ public class SecondJpaConfig {
                 .packages("com.example.model")
                 // Spring会将EntityManagerFactory注入到Repository之中.有了 EntityManagerFactory之后,
                 // Repository就能用它来创建 EntityManager 了,然后 EntityManager 就可以针对数据库执行操作
-                .persistenceUnit("primaryPersistenceUnit")
+                .persistenceUnit("secondPersistenceUnit")
                 .build();
     }
 	
@@ -60,9 +59,9 @@ public class SecondJpaConfig {
      * @param builder
      * @return
      */
-    @Bean(name = "transactionManagerPrimary")
+    @Bean(name = "transactionManagerSecond")
     @Primary
-    PlatformTransactionManager transactionManagerPrimary(EntityManagerFactoryBuilder builder) {
-        return new JpaTransactionManager(entityManagerFactoryPrimary(builder).getObject());
+    PlatformTransactionManager transactionManagerSecond(EntityManagerFactoryBuilder builder) {
+        return new JpaTransactionManager(entityManagerFactorySecond(builder).getObject());
     }
 }

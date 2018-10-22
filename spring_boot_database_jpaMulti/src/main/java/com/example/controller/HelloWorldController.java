@@ -1,6 +1,7 @@
 package com.example.controller;
 
-import com.example.dao.*;
+import com.example.dao.UserRepository.*;
+import com.example.dao.UserRepository2.*;
 import com.example.model.*;
 
 import javax.annotation.Resource;
