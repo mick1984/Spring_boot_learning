@@ -22,6 +22,15 @@ public class HelloWorldController {
 		//return "string";
     }
 	
+	@RequestMapping("/hello2")    
+    public Article index2() { 		
+		//dao = new ArticleDaoJdbcTemplateImpl();
+		Article data = dao.getArticle2("测试2");
+        return data;
+		
+		//return "string";
+    }
+	
 	@RequestMapping("/insert")    
 	public String insert()
 	{
