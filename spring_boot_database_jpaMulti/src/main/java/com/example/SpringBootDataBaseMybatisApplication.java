@@ -6,10 +6,10 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 @ComponentScan("com.example")
-public class SpringBootDataBaseJpaMultiApplication {
+public class SpringBootDataBaseMybatisApplication {
 
 	public static void main(String[] args) {
 		
-		SpringApplication.run(SpringBootDataBaseJpaMultiApplication.class, args);
+		SpringApplication.run(SpringBootDataBaseMybatisApplication.class, args);
 	}
 }
