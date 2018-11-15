@@ -1,6 +1,7 @@
 package com.example.controller;
 
-import com.example.mapper.*;
+import com.example.mapper.test1.*;
+import com.example.mapper.test2.*;
 import com.example.model.*;
 
 import java.util.ArrayList;
@@ -13,7 +14,10 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloWorldController {
 
 	@Autowired
-	private UserMapper userMapper;
+	private User1Mapper userMapper;
+	
+	@Autowired
+	private User2Mapper userMapper2;
 	
 	@RequestMapping("/hello")    
     public List<User> index() { 		
@@ -50,6 +54,25 @@ public class HelloWorldController {
 		data.setUserName(userName);
 				
 		userMapper.insert(data);
+		
+//		if(result>0)
+//			return "插入成功";
+//		else return "插入失败";
+		
+		return data;
+	}
+	
+	@RequestMapping("/insert2")    
+	public User insert2(String userName)
+	{
+		User data = new User();
+		data.setEmail(userName+"@abc.com");
+		data.setNickName(userName);
+		data.setPassWord("123");
+		data.setRegTime("2018-10-22");
+		data.setUserName(userName);
+				
+		userMapper2.insert(data);
 		
 //		if(result>0)
 //			return "插入成功";

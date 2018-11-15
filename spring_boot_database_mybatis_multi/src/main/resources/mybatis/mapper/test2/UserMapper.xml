@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.mapper.test2.User2Mapper">
+
+	<resultMap id="BaseResultMap"  type="com.example.model.User">
+		<id column="id"  property="id"  jdbcType="BIGINT"/>
+		<result column="email"  property="email"  jdbcType="VARCHAR"  />
+		<result column="nick_name"  property="nickName"  jdbcType="VARCHAR" />
+		<result column="user_name"  property="userName"  jdbcType="VARCHAR" />
+	</resultMap>
+	
+	<sql id="Base_Column_List">
+		id,email,nick_name,user_name
+	</sql>
+	
+	<select id="getAll" resultMap="BaseResultMap">
+		select 
+		<include refid="Base_Column_List"></include> 
+		from user
+	</select>
+	
+	<select id="getOne" parameterType="java.lang.String" resultMap="BaseResultMap">
+		select 
+		<include refid="Base_Column_List"></include> 
+		from user
+		where user_name=#{userName}
+	</select>
+	
+	<insert id="insert" parameterType="com.example.model.User" >
+		insert into user(id,email,nick_name,pass_word,reg_time,remark,user_name) 
+		values(#{id},#{email},#{nickName},#{passWord},#{regTime},#{remark},#{userName})
+	</insert>
+	
+	<update id="update"  parameterType="com.example.model.User" >
+		update user set user_name=#{userName},nick_name=#{nickName} where id=#{id}
+	</update>
+	
+	<delete id="delete" parameterType="java.lang.Long">
+		delete from user where id=#{id}
+	</delete>
+	
+</mapper>

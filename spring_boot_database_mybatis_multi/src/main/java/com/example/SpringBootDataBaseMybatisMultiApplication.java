@@ -8,10 +8,10 @@ import org.springframework.context.annotation.ComponentScan;
 @SpringBootApplication
 @ComponentScan("com.example")
 @MapperScan("com.example.mapper")
-public class SpringBootDataBaseMybatisApplication {
+public class SpringBootDataBaseMybatisMultiApplication {
 
 	public static void main(String[] args) {
 		
-		SpringApplication.run(SpringBootDataBaseMybatisApplication.class, args);
+		SpringApplication.run(SpringBootDataBaseMybatisMultiApplication.class, args);
 	}
 }
