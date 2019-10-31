@@ -5,17 +5,10 @@
 
 	<groupId>com.example</groupId>
 	<artifactId>spring_boot_acgtale</artifactId>
-<<<<<<< HEAD
 	<version>1.1.0</version>
 	<packaging>jar</packaging>
 
-	<name>spring_boot_helloworld</name>
-=======
-	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
-
-	<name>spring_boot_acgtale</name>
->>>>>>> f4ae5656cbfec7a022e24acc19bcf77cd2150c2c
+	<name>spring_boot_helloworld</name>	
 	<description>Demo project for Spring Boot</description>
 
 	<parent>
@@ -44,16 +37,10 @@
 		</dependency>
 		
 		<dependency>
-<<<<<<< HEAD
     		<groupId>org.springframework.boot</groupId>
     		<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
 		
-=======
- 			<groupId>org.springframework.boot</groupId>
- 			<artifactId>spring-boot-starter-actuator</artifactId>
-		</dependency>
->>>>>>> f4ae5656cbfec7a022e24acc19bcf77cd2150c2c
 	</dependencies>
 
 	<build>

@@ -6,8 +6,8 @@
 	<groupId>com.example</groupId>
 	<artifactId>spring_boot_helloworld</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
-
+	<packaging>jar</packaging>
+	
 	<name>spring_boot_helloworld</name>
 	<description>Demo project for Spring Boot</description>
 
