@@ -24,12 +24,37 @@
 		<java.version>1.8</java.version>
 	</properties>
 
-	<dependencies>
+	<dependencies>	  
+        <!-- 基础组件-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+        
+         <!-- 热部署组件 -->
+        <dependency>
+            <groupId> org.springframework.boot</groupId>
+            <artifactId> spring-boot-devtools</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+	   <!-- web支持 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+		
+		<!-- 模板引擎 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-freemarker</artifactId>
+        </dependency>
 
+        <!-- 测试组件 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
