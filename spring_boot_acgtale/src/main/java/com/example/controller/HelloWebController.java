@@ -28,12 +28,12 @@ public class HelloWebController {
 		return "index";
 	}
 	
-	@RequestMapping("/test")    
-	public String test(Model model)
+	@RequestMapping("/gridtest")    
+	public String gridtest(Model model)
 	{
 		model.addAttribute("strShow","测试");
 		
 		//这里返回是用什么模板的意思，test就代表test.html
-		return "test";
+		return "gridtest";
 	}
 }

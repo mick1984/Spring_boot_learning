@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	<script src="webjars/jquery/jquery.min.js"></script>
+    	<script src="webjars/bootstrap/js/bootstrap.min.js"></script>
+    	<link rel="stylesheet" href="webjars/bootstrap/css/bootstrap.min.css" />
+    	<meta charset="UTF-8">
+    </head>
+    <body>    
+      <div class="alert alert-success">
+      	<p th:text="${strShow}"></p>
+      </div>
+    <!-- 这里显示一个grid布局，1行是有12格，col-sm-2代表分辨率大于等于768启用、这里的2代表占用2个， col-xs-4 代表分别率小于768时启用
+    		另外还有col-md-*，分辨率大于等于992启用；col-lg-*，分辨率大于等于1200启用
+    -->
+	<div class="container" >
+  		<div class="row">
+  		  <div class="col-xs-4 col-sm-2" style="background-color: #dedef8;box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+  		    测试1
+  		  </div>
+  		  <div class="col-xs-4 col-sm-2" style="background-color: #dedef8;box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+  		    测试2
+  		  </div>
+  		  <div class="col-xs-4 col-sm-2" style="background-color: #dedef8;box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+  		  测试3
+  		  </div>
+  		  <div class="col-xs-4 col-sm-2" style="background-color: #dedef8;box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+  		  测试4
+  		  </div>
+  		  <div class="col-xs-4 col-sm-2 col-sm-offset-2" style="background-color: #dedef8;box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+  		  测试5
+  		  </div>
+  		</div>   		
+	</div>
+
+    </body>
+    
+</html>
